@@ -16,13 +16,17 @@
 
 (defn recursive-reverse [coll]
   (loop [acc '()
-         coll coll]
-    (if (nil? coll)
-      acc
-      (recur (conj acc (first coll)) (rest coll)))))
+           coll coll]
+      (if (seq coll)
+        (recur (conj acc (first coll)) (rest coll))
+        acc)))
 
 (defn factorial [n]
-  __)
+  (loop [acc 1
+         n n]
+    (if (= n 0)
+      acc
+      (recur (* acc n) (dec n)))))
 
 (meditations
   "Recursion ends with a base case"
