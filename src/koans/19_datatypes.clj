@@ -22,7 +22,7 @@
 
 (meditations
   "Holding records is meaningful only when the record is worthy of you"
-  (= __ (.prize (Nobel. "peace")))
+  (= "peace" (.prize (->Nobel "peace")))
 
   "Types are quite similar"
   (= __ (.prize (Pulitzer. "literature")))
